@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "salinaka-ecommerce"
-  }
+    "default": "audio-book-app-7688c",
+    "book": "audio-book-app-7688c"
+  },
+  "targets": {},
+  "etags": {}
 }
