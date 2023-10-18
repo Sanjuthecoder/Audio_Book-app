@@ -17,6 +17,7 @@
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json"
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^2.0.0",
     "copy-webpack-plugin": "^8.1.1",
     "cross-env": "^7.0.3",
@@ -54,7 +55,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
-    "firebase": "^8.4.3",
+    "bootstrap": "^5.3.2",
+    "firebase": "^8.10.1",
     "formik": "^2.2.6",
     "history": "^4.10.0",
     "moment": "^2.29.1",

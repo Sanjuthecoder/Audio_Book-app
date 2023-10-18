@@ -1,11 +1,11 @@
 /* eslint-disable indent */
-import { ImageLoader } from '@/components/common';
-import { ACCOUNT_EDIT } from '@/constants/routes';
-import { displayDate } from '@/helpers/utils';
-import PropType from 'prop-types';
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { ImageLoader } from "@/components/common";
+import { ACCOUNT_EDIT } from "@/constants/routes";
+import { displayDate } from "@/helpers/utils";
+import PropType from "prop-types";
+import React from "react";
+import { useSelector } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 const UserProfile = (props) => {
   const profile = useSelector((state) => state.profile);
@@ -28,13 +28,12 @@ const UserProfile = (props) => {
               src={profile.avatar}
             />
           </div>
-          <button
+          {/* <button
             className="button button-small user-profile-edit"
             onClick={() => props.history.push(ACCOUNT_EDIT)}
-            type="button"
-          >
+            type="button">
             Edit Account
-          </button>
+          </button> */}
         </div>
         <div className="user-profile-details">
           <h2 className="user-profile-name">{profile.fullname}</h2>
@@ -55,13 +54,13 @@ const UserProfile = (props) => {
           ) : (
             <h5 className="text-subtle text-italic">Mobile not set</h5>
           )}
-          <span>Date Joined</span>
+          {/* <span>Date Joined</span> */}
           <br />
-          {profile.dateJoined ? (
+          {/* {profile.dateJoined ? (
             <h5>{displayDate(profile.dateJoined)}</h5>
           ) : (
             <h5 className="text-subtle text-italic">Not available</h5>
-          )}
+          )} */}
         </div>
       </div>
     </div>
@@ -70,8 +69,8 @@ const UserProfile = (props) => {
 
 UserProfile.propTypes = {
   history: PropType.shape({
-    push: PropType.func
-  }).isRequired
+    push: PropType.func,
+  }).isRequired,
 };
 
 export default withRouter(UserProfile);

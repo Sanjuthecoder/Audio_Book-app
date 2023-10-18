@@ -4,22 +4,46 @@
   background: $background-color;
   display: flex;
   align-items: center;
-  padding: .5rem 5rem;
+  padding: 0.5rem 5rem;
   padding-top: 3rem;
   position: absolute;
   top: 0;
   transform: translateY(0);
   z-index: map-get($z-index, navigation);
   box-shadow: none;
-  @include bezier-transition(transform, .3s, ease);
+  @include bezier-transition(transform, 0.3s, ease);
 
   @include tablet {
-    padding: .5rem 2rem;
+    padding: 0.5rem 2rem;
   }
 
   @include mobile {
     padding: 0 $s-size;
     position: fixed;
+  }
+
+  .Side-menu-main {
+    padding-left: 0;
+    margin-right: 2rem;
+    flex-grow: 1;
+    width: 20%;
+
+    // z-index: 3;
+    // -----
+
+    li {
+      display: block;
+
+      a {
+        padding: 10px 15px;
+        font-size: 1.4rem;
+        opacity: 0.5;
+
+        &:hover {
+          background: $background-color-01;
+        }
+      }
+    }
   }
 
   .logo {
@@ -46,8 +70,8 @@
 .navigation-admin {
   height: 6rem;
   background: $white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
-  padding: .5rem $l-size;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem $l-size;
   display: flex;
   justify-content: space-between;
 }
@@ -57,7 +81,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: 0;
-  margin: 0;
+  margin-left: 750px;
   text-align: right;
 }
 
@@ -68,13 +92,12 @@
 
   li {
     display: inline-block;
-    
-    
+
     a {
       padding: 10px 15px;
       font-size: 1.4rem;
-      opacity: .5;
-      
+      opacity: 0.5;
+
       &:hover {
         background: $background-color-01;
       }
@@ -111,6 +134,10 @@
 }
 
 .navigation-menu-active {
+  border: 5px;
   font-weight: bold;
   opacity: 1 !important;
+  // padding-top: 20px;
+  // margin-right: 20px;
+  width: 40%;
 }
